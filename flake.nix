@@ -41,6 +41,10 @@
         modules = ./gomod2nix.toml;
       };
 
+      checks = {
+        yamlfmt = self.packages.${system}.yamlfmt;
+      };
+
       devShells.default = pkgs.devshell.mkShell {
         commands = with pkgs; [
           {
