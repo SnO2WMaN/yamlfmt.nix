@@ -48,6 +48,10 @@
       devShells.default = pkgs.devshell.mkShell {
         commands = with pkgs; [
           {
+            package = "treefmt";
+            category = "formatter";
+          }
+          {
             name = "generate-gomod2nix";
             command = "gomod2nix --dir ${inputs.yamlfmt} --outdir ./";
           }
@@ -55,6 +59,9 @@
         packages = with pkgs; [
           alejandra
           gomod2nix
+          taplo-cli
+          treefmt
+          self.packages.${system}.yamlfmt
         ];
       };
     })
