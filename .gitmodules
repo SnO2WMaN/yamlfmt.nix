@@ -1,3 +1,0 @@
-[submodule "yamlfmt"]
-	path = yamlfmt
-	url = https://github.com/google/yamlfmt
