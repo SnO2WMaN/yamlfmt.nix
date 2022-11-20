@@ -5,7 +5,7 @@
     devshell.url = "github:numtide/devshell";
     flake-utils.url = "github:numtide/flake-utils";
     yamlfmt = {
-      url = "github:google/yamlfmt/v0.5.0";
+      url = "github:google/yamlfmt/v0.6.0";
       flake = false;
     };
   };
@@ -28,22 +28,16 @@
     in {
       packages.default = pkgs.buildGoApplication {
         pname = "yamlfmt";
-        version = "0.5.0";
+        version = "0.6.0";
         src = inputs.yamlfmt;
         modules = ./gomod2nix.toml;
       };
       packages.yamlfmt = self.packages.${system}.default;
 
-      checks = {
-        yamlfmt = self.packages.${system}.yamlfmt;
-      };
+      checks.yamlfmt = self.packages.${system}.yamlfmt;
 
       devShells.default = pkgs.devshell.mkShell {
         commands = with pkgs; [
-          {
-            package = "treefmt";
-            category = "formatter";
-          }
           {
             name = "generate-gomod2nix";
             command = "gomod2nix --dir ${inputs.yamlfmt} --outdir ./";
@@ -54,7 +48,6 @@
           gomod2nix
           taplo-cli
           treefmt
-          self.packages.${system}.yamlfmt
         ];
       };
     })
