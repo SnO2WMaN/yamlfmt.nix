@@ -2,18 +2,10 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     gomod2nix.url = "github:tweag/gomod2nix";
-    yamlfmt = {
-      url = "github:google/yamlfmt/v0.5.0";
-      flake = false;
-    };
-  };
-
-  inputs = {
-    # dev
     devshell.url = "github:numtide/devshell";
     flake-utils.url = "github:numtide/flake-utils";
-    flake-compat = {
-      url = "github:edolstra/flake-compat";
+    yamlfmt = {
+      url = "github:google/yamlfmt/v0.5.0";
       flake = false;
     };
   };
