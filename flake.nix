@@ -38,12 +38,7 @@
         ];
       };
     in {
-      packages.default = pkgs.buildGoApplication {
-        pname = "yamlfmt";
-        version = "0.6.0";
-        src = inputs.yamlfmt;
-        modules = ./gomod2nix.toml;
-      };
+      packages.default = pkgs.callPackage ./. {src = inputs.yamlfmt;};
       packages.yamlfmt = self.packages.${system}.default;
 
       checks.yamlfmt = self.packages.${system}.yamlfmt;
