@@ -2,10 +2,6 @@
 command = "alejandra"
 includes = ["*.nix"]
 
-[formatter.yamlfmt]
-command = "yamlfmt"
-includes = ["*.yml", "*.yaml"]
-
 [formatter.taplo]
 command = "taplo"
 options = ["fmt"]
