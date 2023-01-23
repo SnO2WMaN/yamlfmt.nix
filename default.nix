@@ -21,6 +21,6 @@
 pkgs.buildGoApplication {
   inherit src;
   pname = "yamlfmt";
-  version = "0.6.0";
+  version = "0.7.1";
   modules = ./gomod2nix.toml;
 }

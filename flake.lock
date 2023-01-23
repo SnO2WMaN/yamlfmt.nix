@@ -89,16 +89,16 @@
     "yamlfmt": {
       "flake": false,
       "locked": {
-        "lastModified": 1667306292,
-        "narHash": "sha256-6ky3QU/WPKHRaC57jMm0kOuEytOdDEaFzETio3eiy/Q=",
+        "lastModified": 1673201328,
+        "narHash": "sha256-oTdBFWISOfaz4ZDbJmyxtaKrjo9DVNJ5N7Qxnu7SwZA=",
         "owner": "google",
         "repo": "yamlfmt",
-        "rev": "811c65058125f094d4d5d886253f9a3c92b5a81d",
+        "rev": "e1c97a1b3ffd0f3cfb37685b6a046d5f6963f2d8",
         "type": "github"
       },
       "original": {
         "owner": "google",
-        "ref": "v0.6.0",
+        "ref": "v0.7.1",
         "repo": "yamlfmt",
         "type": "github"
       }

@@ -2,7 +2,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     yamlfmt = {
-      url = "github:google/yamlfmt/v0.6.0";
+      url = "github:google/yamlfmt/v0.7.1";
       flake = false;
     };
     gomod2nix = {
